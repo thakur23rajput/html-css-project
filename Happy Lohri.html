@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+  <title>Happy Lohri 2026</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(to bottom, #000428 0%, #004e92 50%, #522e2a 100%);
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .lohri-card {
+      position: relative;
+      width: 90%;
+      max-width: 1000px;
+      height: 80vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite alternate;
+    }
+    .star:nth-child(1) { top: 10%; left: 10%; width: 3px; height: 3px; animation-delay: 0s; }
+    .star:nth-child(2) { top: 20%; left: 20%; width: 2px; height: 2px; animation-delay: 0.5s; }
+    .star:nth-child(3) { top: 15%; left: 80%; width: 4px; height: 4px; animation-delay: 1s; }
+    .star:nth-child(4) { top: 30%; left: 90%; width: 2px; height: 2px; animation-delay: 1.5s; }
+    @keyframes twinkle {
+      0% { opacity: 0.3; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.5); }
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      z-index: 5;
+      animation: glow 2s ease-in-out infinite alternate;
+      padding: 20px;
+      max-width: 450px;
+    }
+    .bonfire {
+      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      z-index: 4;
+    }
+    .bonfire_label {
+      position: absolute;
+      bottom: 10%;
+      color: #ff8c00;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      animation: fireGlow 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes fireGlow {
+      from { text-shadow: 0 0 10px #ff8c00; }
+      to { text-shadow: 0 0 20px #ff4500, 0 0 30px #ffd700; }
+    }
+    .logs_container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .log {
+      height: 60px;
+      width: 30px;
+      position: absolute;
+      background-color: #725442;
+      clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+    }
+    .log_1 {
+      left: -50px;
+      transform: rotate(45deg);
+    }
+    .log_2 {
+      left: -10px;
+      top: 10px;
+    }
+    .log_3 {
+      left: 30px;
+      transform: rotate(-45deg);
+    }
+    .log_circle {
+      background-color: #91725c;
+      position: absolute;
+      border-radius: 50%;
+    }
+    .log_circle_1 {
+      height: 35px;
+      width: 32px;
+      top: 50px;
+      left: -70px;
+    }
+    .log_circle_2 {
+      height: 37px;
+      width: 37px;
+      top: 70px;
+      left: -20px;
+    }
+    .log_circle_3 {
+      height: 35px;
+      width: 32px;
+      top: 50px;
+      left: 40px;
+    }
+    .glowing_circle {
+      height: 250px;
+      width: 250px;
+      position: absolute;
+      bottom: 25%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(circle, #ff4500, #8b0000);
+      border-radius: 50%;
+      opacity: 0.8;
+    }
+    .flame_container {
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      animation: flame_flickering 50ms infinite alternate ease-in-out;
+    }
+    .flame {
+      bottom: 0;
+      position: absolute;
+      border-radius: 50% 0 50% 50%;
+      transform: rotate(-45deg) scale(1.5);
+    }
+    .flame_red {
+      left: 5px;
+      width: 50px;
+      height: 60px;
+      background: linear-gradient(to top, OrangeRed, red);
+      box-shadow: 0 0 20px OrangeRed;
+    }
+    .flame_orange {
+      left: 10px;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(to top, orange, yellow);
+      box-shadow: 0 0 20px orange;
+    }
+    .flame_yellow {
+      left: 15px;
+      width: 30px;
+      height: 20px;
+      background: gold;
+      box-shadow: 0 0 20px gold;
+    }
+    .flame_blue {
+      width: 10px;
+      height: 10px;
+      left: 25px;
+      bottom: -25px;
+      background: SlateBlue;
+      border-radius: 50%;
+      box-shadow: 0 0 20px SlateBlue;
+    }
+    .flame_black {
+      width: 11px;
+      height: 11px;
+      left: 25px;
+      bottom: -40px;
+      background: black;
+      border-radius: 50%;
+      box-shadow: 0 0 20px black;
+    }
+    @keyframes flame_flickering {
+      0% { transform: translate(-50%, -50%) rotate(-1deg) scale(1); }
+      25% { transform: translate(-50%, -50%) rotate(1deg) scaleY(0.95); }
+      50% { transform: translate(-50%, -50%) rotate(-1deg) scaleY(0.9); }
+      75% { transform: translate(-50%, -50%) rotate(1deg) scaleY(1.05); }
+      100% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffd700; }
+      to { text-shadow: 0 0 20px #ffd700, 0 0 30px #ff4500; }
+    }
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      color: #ffd700;
+      line-height: 1.1;
+    }
+    .punjabi {
+      font-size: 2.5rem;
+      color: #ff6347;
+      margin-bottom: 20px;
+      font-family: 'Noto Sans', sans-serif;
+      line-height: 1.2;
+    }
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+      color: #ffd700;
+      line-height: 1.4;
+    }
+    @media (max-width: 768px) {
+      .lohri-card {
+        flex-direction: column;
+        height: 90vh;
+        gap: 20px;
+      }
+      .content {
+        align-items: center;
+        text-align: center;
+        order: 2;
+      }
+      h1 { font-size: 2.8rem; }
+      .punjabi { font-size: 2rem; }
+      p { font-size: 1.3rem; }
+      .bonfire_label { font-size: 1.6rem; }
+      .glowing_circle { height: 200px; width: 200px; }
+      .flame_container { width: 50px; height: 50px; }
+      .bonfire { order: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="lohri-card">
+    <div class="stars">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+    </div>
+    
+    <div class="content">
+      <h1>Lohri Mubarak 2026! 🪔</h1>
+      <div class="punjabi">ਲੋਹੜੀ ਦੀ ਲੱਖ ਵਧਾਈ! 🌺 ਫ਼ਸਲਾਂ ਭਰਪੂਰ ਹੋਣ</div>
+      <p>लोहड़ी का त्योहार लाए खुशियां, समृद्धि और अनंत उमंग!</p>
+      <p>May the bonfire's warmth bless your home with prosperity & joy forever! ✨</p>
+    </div>
+    
+    <div class="bonfire">
+      <div class="logs_container">
+        <div class="log log_1"></div>
+        <div class="log log_3"></div>
+        <div class="log log_2"></div>
+        <div class="log_circle log_circle_1"></div>
+        <div class="log_circle log_circle_2"></div>
+        <div class="log_circle log_circle_3"></div>
+      </div>
+      <div class="glowing_circle"></div>
+      <div class="flame_container">
+        <div class="flame_red flame"></div>
+        <div class="flame_orange flame"></div>
+        <div class="flame_yellow flame"></div>
+        <div class="flame_blue"></div>
+        <div class="flame_black"></div>
+      </div>
+      <div class="bonfire_label">🔥 LOHRi BONFIRE 🔥</div>
+    </div>
+  </div>
+</body>
+</html>
