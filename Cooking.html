@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delicious Recipes</title>
+  <link rel="stylesheet" href="CSS 8.css">
+</head>
+<body>
+
+  <header role="banner">
+    <h1>Delicious Recipes</h1>
+    <p>Cook quick and tasty dishes in minutes!</p>
+  </header>
+
+  <main class="container" role="main">
+
+    <div class="tabs" role="tablist" aria-label="Recipe Tabs">
+      <button class="tab-button active" role="tab" aria-selected="true" aria-controls="recipe1" id="tab1">Pasta</button>
+      <button class="tab-button" role="tab" aria-selected="false" aria-controls="recipe2" id="tab2">Chocolate Cake</button>
+      <button class="tab-button" role="tab" aria-selected="false" aria-controls="recipe3" id="tab3">Caesar Salad</button>
+    </div>
+
+    <section id="recipe1" class="recipe-content active" role="tabpanel" aria-labelledby="tab1">
+      <img src="46.jpeg" alt="Delicious Pasta" class="recipe-image" />
+      <h2>Ingredients</h2>
+      <ul class="ingredients-list" aria-label="Ingredients checklist for pasta">
+        <li><input type="checkbox" id="r1-ingredient1" /><label for="r1-ingredient1">200g pasta</label></li>
+        <li><input type="checkbox" id="r1-ingredient2" /><label for="r1-ingredient2">2 tbsp olive oil</label></li>
+        <li><input type="checkbox" id="r1-ingredient3" /><label for="r1-ingredient3">1 chopped onion</label></li>
+        <li><input type="checkbox" id="r1-ingredient4" /><label for="r1-ingredient4">2 cloves garlic</label></li>
+        <li><input type="checkbox" id="r1-ingredient5" /><label for="r1-ingredient5">1 cup tomato sauce</label></li>
+        <li><input type="checkbox" id="r1-ingredient6" /><label for="r1-ingredient6">Salt & pepper to taste</label></li>
+        <li><input type="checkbox" id="r1-ingredient7" /><label for="r1-ingredient7">Grated cheese for garnish</label></li>
+      </ul>
+      <h2>Instructions</h2>
+      <ol>
+        <li>Boil pasta in salted water for 8-10 minutes. Drain and set aside.</li>
+        <li>Heat olive oil in a pan, then add onion and garlic. Sauté until golden brown.</li>
+        <li>Add tomato sauce, salt, and pepper. Let it simmer for 5 minutes.</li>
+        <li>Mix in the pasta and stir well until coated.</li>
+        <li>Serve hot and sprinkle grated cheese on top.</li>
+      </ol>
+    </section>
+
+    <section id="recipe2" class="recipe-content" role="tabpanel" aria-labelledby="tab2" tabindex="0" hidden>
+      <img src="47.jpeg" alt="Delicious Chocolate Cake" class="recipe-image" />
+      <h2>Ingredients</h2>
+      <ul class="ingredients-list" aria-label="Ingredients checklist for chocolate cake">
+        <li><input type="checkbox" id="r2-ingredient1" /><label for="r2-ingredient1">1 3/4 cups all-purpose flour</label></li>
+        <li><input type="checkbox" id="r2-ingredient2" /><label for="r2-ingredient2">2 cups sugar</label></li>
+        <li><input type="checkbox" id="r2-ingredient3" /><label for="r2-ingredient3">3/4 cup cocoa powder</label></li>
+        <li><input type="checkbox" id="r2-ingredient4" /><label for="r2-ingredient4">1 1/2 tsp baking powder</label></li>
+        <li><input type="checkbox" id="r2-ingredient5" /><label for="r2-ingredient5">1 1/2 tsp baking soda</label></li>
+        <li><input type="checkbox" id="r2-ingredient6" /><label for="r2-ingredient6">2 eggs</label></li>
+        <li><input type="checkbox" id="r2-ingredient7" /><label for="r2-ingredient7">1 cup milk</label></li>
+        <li><input type="checkbox" id="r2-ingredient8" /><label for="r2-ingredient8">1/2 cup vegetable oil</label></li>
+        <li><input type="checkbox" id="r2-ingredient9" /><label for="r2-ingredient9">2 tsp vanilla extract</label></li>
+      </ul>
+      <h2>Instructions</h2>
+      <ol>
+        <li>Preheat oven to 350°F (175°C). Grease and flour two 9-inch round baking pans.</li>
+        <li>Mix flour, sugar, cocoa, baking powder, and baking soda in a large bowl.</li>
+        <li>Add eggs, milk, oil, and vanilla. Beat for 2 minutes on medium speed.</li>
+        <li>Pour batter evenly into prepared pans.</li>
+        <li>Bake 30-35 minutes or until wooden pick inserted in center comes out clean.</li>
+        <li>Cool for 10 minutes, then remove from pans to wire racks. Cool completely.</li>
+      </ol>
+    </section>
+
+    <section id="recipe3" class="recipe-content" role="tabpanel" aria-labelledby="tab3" tabindex="0" hidden>
+      <img src="48.jpeg" alt="Fresh Caesar Salad" class="recipe-image" />
+      <h2>Ingredients</h2>
+      <ul class="ingredients-list" aria-label="Ingredients checklist for caesar salad">
+        <li><input type="checkbox" id="r3-ingredient1" /><label for="r3-ingredient1">1 large head romaine lettuce</label></li>
+        <li><input type="checkbox" id="r3-ingredient2" /><label for="r3-ingredient2">1/2 cup croutons</label></li>
+        <li><input type="checkbox" id="r3-ingredient3" /><label for="r3-ingredient3">1/4 cup grated Parmesan cheese</label></li>
+        <li><input type="checkbox" id="r3-ingredient4" /><label for="r3-ingredient4">Caesar dressing</label></li>
+        <li><input type="checkbox" id="r3-ingredient5" /><label for="r3-ingredient5">Salt & pepper to taste</label></li>
+      </ul>
+      <h2>Instructions</h2>
+      <ol>
+        <li>Wash and chop the romaine lettuce.</li>
+        <li>In a large bowl, toss lettuce with caesar dressing until coated.</li>
+        <li>Add croutons and grated Parmesan cheese.</li>
+        <li>Season with salt and pepper as desired, then toss again lightly.</li>
+        <li>Serve immediately chilled.</li>
+      </ol>
+    </section>
+
+    <a href="feedback.html" class="button-link" role="button" aria-label="Submit your feedback">Submit your feedback</a>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 Cooking with HTML | All Rights Reserved</p>
+  </footer>
+
+  <script>
+
+    const tabs = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.recipe-content');
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        contents.forEach(c => {
+          c.classList.remove('active');
+          c.setAttribute('hidden', '');
+          c.setAttribute('tabindex', '-1');
+        });
+
+        
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        contents[i].classList.add('active');
+        contents[i].removeAttribute('hidden');
+        contents[i].setAttribute('tabindex', '0');
+      });
+    });
+
+      document.querySelectorAll('.ingredients-list input[type="checkbox"]').forEach(cb => {
+      const id = cb.id;
+      const saved = localStorage.getItem(id);
+      if (saved === 'true') cb.checked = true;
+
+      cb.addEventListener('change', () => {
+        localStorage.setItem(id, cb.checked);
+      });
+    });
+  </script>
+
+</body>
+</html>
